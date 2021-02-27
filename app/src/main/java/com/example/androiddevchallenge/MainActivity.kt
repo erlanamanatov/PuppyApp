@@ -26,7 +26,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavType
-import androidx.navigation.compose.*
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.navArgument
+import androidx.navigation.compose.navigate
+import androidx.navigation.compose.rememberNavController
 import com.example.androiddevchallenge.data.PuppyList
 import com.example.androiddevchallenge.ui.screens.Puppies
 import com.example.androiddevchallenge.ui.screens.PuppyDetailed
@@ -66,7 +70,8 @@ fun MyApp() {
                     puppyId = backStackEntry.arguments?.getInt("puppyId")!!,
                     onBackClick = {
                         navController.navigateUp()
-                    })
+                    }
+                )
             }
         }
     }

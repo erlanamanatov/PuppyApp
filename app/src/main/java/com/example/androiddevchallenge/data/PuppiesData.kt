@@ -1,8 +1,23 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.example.androiddevchallenge.data
 
 import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.data.Sex.MALE
 import com.example.androiddevchallenge.data.Sex.FEMALE
+import com.example.androiddevchallenge.data.Sex.MALE
 
 object PuppyList {
     val data = listOf(
@@ -15,8 +30,8 @@ object PuppyList {
             sex = FEMALE,
             age = "8 weeks",
             description = "Emily, female, seven weeks old. She is currently 7 pounds. Very active. Loves tug-a-war and wrestling with whoever is willing. She's quite spunky.\n" +
-                    "\n" +
-                    "Emily is located in Cashmere, WA. If you are interested please complete our application at Okandogs.com.\n",
+                "\n" +
+                "Emily is located in Cashmere, WA. If you are interested please complete our application at Okandogs.com.\n",
             location = "Cashmere, WA",
             characteristics = "active, playful, spunky",
             health = "Vaccinations up to date",
@@ -31,8 +46,8 @@ object PuppyList {
             sex = FEMALE,
             age = "7 weeks",
             description = "Bella is the smallest of her litter but she is a bit sassy and independent. Bella is just seven weeks old and will be adoptable on 1/29/21.She and her littermates are already showing signed of house training, very smart pups.\n" +
-                    "\n" +
-                    "Previous Malinois experience preferred.",
+                "\n" +
+                "Previous Malinois experience preferred.",
             location = "Cashmere, WA",
             characteristics = "smart, sassy, leader",
             health = "Vaccinations up to date",
@@ -46,8 +61,8 @@ object PuppyList {
             sex = MALE,
             age = "8 weeks",
             description = "Say hello to Kiwi! Kiwi is a female chihuahua mix who is 8-week-old and weighs 2.4 pounds. This beautiful little girl was found as a stray with her sister and mom just over a week ago. The two little girls had wandered from their mom but luckily were spotted a short time later and all three were brought to Wags to Riches and placed into an amazing foster.\n" +
-                    "\n" +
-                    "Kiwi’s foster family describes her as spunky and playful. She loves to play with toys and with her NINE other foster brothers and sisters!",
+                "\n" +
+                "Kiwi’s foster family describes her as spunky and playful. She loves to play with toys and with her NINE other foster brothers and sisters!",
             location = "Union Gap, WA",
             health = "Vaccinations up to date",
             image = R.drawable.puppy3
@@ -61,8 +76,8 @@ object PuppyList {
             sex = MALE,
             age = "6 months",
             description = "Meet Ramen, a five-and-a-half-month-old Terrier mix.\n" +
-                    "\n" +
-                    "Ramen came in with ten other dogs who were reportedly dumped on someone's property during the snowstorm. He doesn't appear to have been handled or held very much and piddles when you pick him up. He would love to go to a home with shy dog experience and experience socializing nervous pups. He would probably do well in a home with another well-socialized dog who he could lean on for support and follow their lead. Due to Ramen being so unsure right now we recommenced he goes to a home with no young kids. Please remember that Ramen is a puppy and puppy behavior comes with the package. They need basic training and potty training along with being provided chew toys to encourage proper chewing habits. All puppies require socializing from a young age to help them become the best, most well-rounded dog they can be.",
+                "\n" +
+                "Ramen came in with ten other dogs who were reportedly dumped on someone's property during the snowstorm. He doesn't appear to have been handled or held very much and piddles when you pick him up. He would love to go to a home with shy dog experience and experience socializing nervous pups. He would probably do well in a home with another well-socialized dog who he could lean on for support and follow their lead. Due to Ramen being so unsure right now we recommenced he goes to a home with no young kids. Please remember that Ramen is a puppy and puppy behavior comes with the package. They need basic training and potty training along with being provided chew toys to encourage proper chewing habits. All puppies require socializing from a young age to help them become the best, most well-rounded dog they can be.",
             location = "Yakima, WA",
             health = "Vaccinations up to date, spayed / neutered.",
             image = R.drawable.puppy4
@@ -103,10 +118,10 @@ object PuppyList {
             sex = FEMALE,
             age = "8 weeks",
             description = "Amber is the sweetest, most friendly and playful puppy you’ll ever have the pleasure to meet!\n" +
-                    "\n" +
-                    "Her mom is a red heeler mix (cattle dog) and she and her two siblings are the last ones available from a litter of ten adorable puppies.\n" +
-                    "\n" +
-                    "Amber is almost eight weeks old and looking for her furever home.",
+                "\n" +
+                "Her mom is a red heeler mix (cattle dog) and she and her two siblings are the last ones available from a litter of ten adorable puppies.\n" +
+                "\n" +
+                "Amber is almost eight weeks old and looking for her furever home.",
             location = "Van Nuys, CA",
             characteristics = "active, playful, spunky",
             health = "Vaccinations up to date",
@@ -121,7 +136,7 @@ object PuppyList {
             sex = MALE,
             age = "10 months",
             description = "Batman is 10months old puppy! His family can no longer care for him so he is looking for a new loving family so he can continue his beautiful life journey!\n" +
-                    "Batman is a wonderful young pup, who loves to play and human attention! He is dog friendly (including small dogs) and kid-friendly. He enjoys running around in a yard but also likes to be inside to curly up with his hooman. Only 10 months old, Batman is already a big boy at 62lbs! He is quite obedient, he knows sit and stay, like his current family says, “I can leave the back door open and if I say.....sit batman....he sits. Then I say Stay! And he will stay right there with the door open.” Batman is very loving and affectionate! He does not like to be left alone and does require more house training as he is still a puppy but he is fully potty trained. Batman will be the perfect addition to an active family with a yard, who can take him on daily walks and exercise.",
+                "Batman is a wonderful young pup, who loves to play and human attention! He is dog friendly (including small dogs) and kid-friendly. He enjoys running around in a yard but also likes to be inside to curly up with his hooman. Only 10 months old, Batman is already a big boy at 62lbs! He is quite obedient, he knows sit and stay, like his current family says, “I can leave the back door open and if I say.....sit batman....he sits. Then I say Stay! And he will stay right there with the door open.” Batman is very loving and affectionate! He does not like to be left alone and does require more house training as he is still a puppy but he is fully potty trained. Batman will be the perfect addition to an active family with a yard, who can take him on daily walks and exercise.",
             location = "Glendora, CA",
             characteristics = "Loving, Affectionate, Friendly, Playful, Energetic",
             health = "Vaccinations up to date",
@@ -136,8 +151,8 @@ object PuppyList {
             sex = FEMALE,
             age = "10 weeks",
             description = "Imagine your home with the loveliest pair of puppy dog eyes looking back at you from every room. The best part about adopting a puppy is seeing them enjoy all of the new things the world has to offer. They will need time, energy, and patience to help them become the best family pets they can be, so if you’re up for a challenge and a lot of fun, consider adopting one!\n" +
-                    "\n" +
-                    "Electra is a high energy pup that needs further manners and obedience training and guidance. She does not do well with other dogs and we suggest she go to a home without cats. She is a loving girl who can go to a home with older children (12+). She is not yet house trained but with consistency, she will be in no time.",
+                "\n" +
+                "Electra is a high energy pup that needs further manners and obedience training and guidance. She does not do well with other dogs and we suggest she go to a home without cats. She is a loving girl who can go to a home with older children (12+). She is not yet house trained but with consistency, she will be in no time.",
             location = "Chicago, IL",
             characteristics = "high energy, loving, working,",
             health = "Vaccinations up to date, spayed / neutered.",
