@@ -18,14 +18,23 @@ package com.example.androiddevchallenge
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavType
+import androidx.navigation.compose.*
+import com.example.androiddevchallenge.data.PuppyList
+import com.example.androiddevchallenge.ui.screens.Puppies
+import com.example.androiddevchallenge.ui.screens.PuppyDetailed
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
+    @ExperimentalAnimationApi
+    @ExperimentalFoundationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -36,14 +45,35 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-// Start building your app here!
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
 @Composable
 fun MyApp() {
+    val navController = rememberNavController()
+    val puppies = remember { PuppyList.data }
     Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
+        NavHost(navController, startDestination = Screen.PuppiesListScreen.route) {
+            composable(Screen.PuppiesListScreen.route) {
+                Puppies(puppies = puppies) { puppyId ->
+                    navController.navigate("puppyDetailed/$puppyId")
+                }
+            }
+            composable(
+                Screen.PuppyDetailedScreen.route,
+                arguments = listOf(navArgument("puppyId") { type = NavType.IntType })
+            ) { backStackEntry ->
+                PuppyDetailed(
+                    puppyId = backStackEntry.arguments?.getInt("puppyId")!!,
+                    onBackClick = {
+                        navController.navigateUp()
+                    })
+            }
+        }
     }
 }
 
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun LightPreview() {
@@ -52,10 +82,17 @@ fun LightPreview() {
     }
 }
 
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
 @Preview("Dark Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun DarkPreview() {
     MyTheme(darkTheme = true) {
         MyApp()
     }
+}
+
+sealed class Screen(val route: String) {
+    object PuppiesListScreen : Screen("puppies")
+    object PuppyDetailedScreen : Screen("puppyDetailed/{puppyId}")
 }
