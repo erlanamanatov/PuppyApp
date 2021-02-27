@@ -1,4 +1,4 @@
-# Put title of your app here
+# Puppy Adoption App
 
 ![Workflow result](https://github.com/erlanamanatov/PuppyApp/workflows/Check/badge.svg)
 
